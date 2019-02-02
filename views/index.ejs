@@ -5,7 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+
+
 <style>
 html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </style>
@@ -59,7 +72,24 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   </header>
 
   <div class="w3-row-padding w3-margin-bottom">
-    
+    <table id="table_id" class="display">
+	    <thead>
+	        <tr>
+	            <th>Column 1</th>
+	            <th>Column 2</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr>
+	            <td>Row 1 Data 1</td>
+	            <td>Row 1 Data 2</td>
+	        </tr>
+	        <tr>
+	            <td>Row 2 Data 1</td>
+	            <td>Row 2 Data 2</td>
+	        </tr>
+	    </tbody>
+	</table>
   </div>
 
   <!-- Footer -->
@@ -86,6 +116,9 @@ function w3_open() {
   }
 }
 
+$(document).ready( function () {
+    $('#table_id').DataTable();
+} );
 // Close the sidebar with the close button
 function w3_close() {
   mySidebar.style.display = "none";
