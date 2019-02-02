@@ -11,4 +11,7 @@ router.get('/', function(req, res, next) {
 router.get('/upload', function(req, res){
 	res.render("upload");
 });
+router.get('/insurance', function(req, res){
+	res.render("insurance");
+});
 module.exports = router;
